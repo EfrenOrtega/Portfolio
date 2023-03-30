@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Musix",
+    "description": "Aplicación de Música",
+    "tech": [
+      "Tauri",
+      "Python",
+      "Flask",
+      "JS"
+    ],
+    "github": "https://www.google.com",
+    "Team": false,
+    "image": "Musix.svg",
+    "tag": "Escritorio"
+  },
+  {
+    "title": "Musix",
+    "description": "Aplicación de Música",
+    "tech": [
+      "Tauri",
+      "Python",
+      "Flask",
+      "JS"
+    ],
+    "github": "https://www.google.com",
+    "Team": false,
+    "image": "Musix.svg",
+    "tag": "Escritorio"
+  },
+  {
+    "title": "Musix",
+    "description": "Aplicación de Música",
+    "tech": [
+      "Tauri",
+      "Python",
+      "Flask",
+      "JS"
+    ],
+    "github": "https://www.google.com",
+    "Team": false,
+    "image": "Musix.svg",
+    "tag": "Movil"
+  }
+]

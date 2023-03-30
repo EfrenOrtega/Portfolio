@@ -268,14 +268,25 @@ header nav li {
 }
 
 .projects .projects-cards article .details div {
+  display: flex;
   margin: 0.5rem auto;
   width: fit-content;
+}
+
+.projects .projects-cards article .details div img {
+  margin: 0.5rem;
 }
 
 .projects article {
   border-radius: 0.3rem;
 }
 
+
+#warn {
+  display: none;
+  text-align: center;
+  padding: 10rem;
+}
 
 
 footer {
@@ -381,6 +392,10 @@ footer img {
   .skills {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  footer img {
+    width: 1.5rem;
   }
 
 }
