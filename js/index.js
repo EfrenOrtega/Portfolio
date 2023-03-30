@@ -5,6 +5,9 @@ const $projecs = document.querySelector('.projects-cards')
 const fragment = document.createDocumentFragment()
 const $warn = document.getElementById('warn')
 
+const $detailsProject = document.getElementById('details-project')
+const $closeDetailsProject = document.getElementById('close')
+
 const techImg = {
   "Tauri": "",
   "Python": "",
@@ -16,6 +19,7 @@ const cardProjects = document.getElementsByClassName('card')
 const webProjects = document.getElementsByClassName('web')
 
 let flag = false;
+let flag2 = false;
 document.addEventListener('click', e => {
   if (e.target == $btn_menu) {
     document.querySelector('.menu-mobile').classList.add('visible')
@@ -25,10 +29,9 @@ document.addEventListener('click', e => {
     document.querySelector('.menu-mobile').classList.remove('visible')
   }
 
-
-
   if (e.target == document.getElementById('all')) {
 
+    flag2 = true;
 
     document.getElementById('all').classList.remove('active')
     document.getElementById('web').classList.remove('active')
@@ -46,7 +49,7 @@ document.addEventListener('click', e => {
   }
 
   if (e.target == document.getElementById('web')) {
-
+    flag2 = true;
     document.getElementById('all').classList.remove('active')
     document.getElementById('web').classList.remove('active')
     document.getElementById('mobile').classList.remove('active')
@@ -66,7 +69,7 @@ document.addEventListener('click', e => {
   }
 
   if (e.target == document.getElementById('mobile')) {
-
+    flag2 = true;
     document.getElementById('all').classList.remove('active')
     document.getElementById('web').classList.remove('active')
     document.getElementById('mobile').classList.remove('active')
@@ -86,7 +89,7 @@ document.addEventListener('click', e => {
   }
 
   if (e.target == document.getElementById('desktop')) {
-
+    flag2 = true;
     document.getElementById('all').classList.remove('active')
     document.getElementById('web').classList.remove('active')
     document.getElementById('mobile').classList.remove('active')
@@ -105,13 +108,25 @@ document.addEventListener('click', e => {
     }
   }
 
-  if (!flag) {
+  if (e.target.matches(".card *")) {
+    $detailsProject.classList.add('visible')
+    document.querySelector('.opacity').classList.add('visible')
+  }
+
+  if (e.target === $closeDetailsProject) {
+    $detailsProject.classList.remove('visible')
+    document.querySelector('.opacity').classList.remove('visible')
+  }
+
+  if (!flag2) return
+  if (flag == false) {
     $warn.style.display = "inline"
   } else {
-    flag = false
     $warn.style.display = "none"
-
   }
+
+  flag = false
+  flag2 = false
 
 })
 

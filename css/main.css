@@ -125,20 +125,19 @@ img {
   display: none;
 }
 
-.menu.visible {
-  display: inline;
-}
-
 header nav {
   justify-content: right;
+  margin: 1rem 0;
+  margin-bottom: 2rem;
 }
 
 header nav ul {
   display: flex;
 }
 
-header nav li {
-  padding: 1.5rem 2rem;
+header nav a {
+  padding: 0rem 0.7rem;
+  margin: 1rem;
 }
 
 .hero {
@@ -252,6 +251,7 @@ header nav li {
 .projects .projects-cards article {
   text-align: center;
   background-color: var(--third-color);
+  cursor: pointer;
 }
 
 .projects .projects-cards article figure {
@@ -288,6 +288,95 @@ header nav li {
   padding: 10rem;
 }
 
+
+.details-project {
+  position: fixed;
+  overflow: scroll;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--second-color);
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  transition: translate 0.3s ease-in;
+  translate: 100%;
+}
+
+.details-project.visible {
+  translate: 0rem;
+}
+
+.details-project .header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px white solid;
+}
+
+.details-project .header a {
+  width: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+[class^="project-"] {
+  margin-top: 2rem;
+}
+
+.project-presentation h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.project-presentation img {
+  border-radius: 0.4rem;
+  margin: 1rem 0;
+}
+
+.project-description {
+  margin: 2rem 0;
+}
+
+.project-description li {
+  list-style-type: disc;
+}
+
+.project-description ul {
+  padding-left: 1rem;
+}
+
+[class^="project-"] p,
+li,
+figcaption {
+  color: #dadada;
+}
+
+[class^="project-"] h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.project-techs div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-techs article {
+  flex-wrap: wrap;
+  background-color: var(--third-color);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.project-techs article img {
+  margin: auto;
+}
 
 footer {
   display: flex;
@@ -326,6 +415,11 @@ footer img {
 }
 
 @media only screen and (min-width: 768px) and (max-width:1034px) {
+
+  .menu-icon {
+    display: none;
+  }
+
   .about-me .container .container2 {
     display: flex;
     justify-content: space-between;
@@ -342,6 +436,22 @@ footer img {
 }
 
 @media only screen and (min-width:1035px) {
+
+  .menu {
+    display: flex;
+  }
+
+  .menu li:hover {
+    transform: scale(.9);
+  }
+
+  .menu a:hover {
+    border-bottom: 2px solid white;
+  }
+
+  .menu-icon {
+    display: none;
+  }
 
   .hero div {
     width: 40%;
@@ -378,8 +488,8 @@ footer img {
   }
 
   .projects {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .projects .projects-cards {
@@ -389,9 +499,28 @@ footer img {
     gap: 1rem;
   }
 
+  .projects .projects-cards article {
+    border-radius: 0.5em;
+  }
+
   .skills {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .opacity.visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgb(8, 8, 8, .8)
+  }
+
+  .details-project {
+    width: 40%;
+    overflow-x: hidden;
   }
 
   footer img {
