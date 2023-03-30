@@ -22,7 +22,9 @@ html {
   scroll-behavior: smooth;
 }
 
-h2 {
+
+
+section h2 {
   width: 100%;
   font-size: 1.3rem;
   font-weight: bold;
@@ -75,13 +77,12 @@ img {
 .menu-mobile {
   position: fixed;
   z-index: 3;
-  width: 15rem;
+  width: 100%;
   top: 0;
   right: 0;
   bottom: 0;
-  translate: 15rem;
-  background-color: var(--second-color);
-  overflow: hidden;
+  translate: 100%;
+
   transition: translate 0.3s ease-in;
 }
 
@@ -89,10 +90,24 @@ img {
   translate: 0rem;
 }
 
-.menu-mobile nav {
-  display: flex;
-  flex-direction: column;
+.menu-mobile::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  background-color: rgb(7, 7, 7, .8);
+}
+
+.menu-mobile nav {
+  position: absolute;
+  right: 0;
+  display: flex;
+  width: 15rem;
+  height: 100%;
+  flex-direction: column;
+  background-color: var(--second-color);
   text-align: center;
 }
 
@@ -149,11 +164,15 @@ header nav li {
   margin-bottom: 2rem;
 }
 
-.hero h1 {
+.hero div {
+  position: relative;
   margin: auto;
-  font-size: 2rem;
+  width: 75%;
+}
+
+.hero h1 {
+  font-size: 2.7rem;
   font-weight: bold;
-  width: 20rem;
 }
 
 .about-me .container {
@@ -193,8 +212,14 @@ header nav li {
 }
 
 .projects {
-
   background-color: #0E0E0E;
+}
+
+.projects .options {
+  margin: auto;
+  max-width: 30rem;
+  background-color: var(--main-color);
+  border-radius: 0.4rem;
 }
 
 .projects .options ul {
@@ -206,7 +231,7 @@ header nav li {
 }
 
 .projects .options li {
-  margin: 0.5rem;
+  cursor: pointer;
   padding: 0.5rem 0.5rem;
 }
 
@@ -249,4 +274,113 @@ header nav li {
 
 .projects article {
   border-radius: 0.3rem;
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: right;
+  padding: 1rem 0;
+  background-color: var(--second-color);
+}
+
+footer img {
+  width: 1rem;
+  margin: 0 1rem;
+}
+
+@media only screen and (min-width : 0px) and (max-width: 360px) {
+
+  .hero h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .projects .options ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width : 481px) and (min-height: 321px) and (max-width:767px) {
+
+  .projects .projects-cards {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1034px) {
+  .about-me .container .container2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+
+  .projects .projects-cards {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width:1035px) {
+
+  .hero div {
+    width: 40%;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+
+  .about-me .left {
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+    gap: 2rem;
+  }
+
+  .about-me .container {
+    padding: 0 12rem;
+  }
+
+  .about-me .container .container2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+
+  .about-me .left {
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .projects {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .projects .projects-cards {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skills {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
 }
