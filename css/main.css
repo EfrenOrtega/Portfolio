@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #070707;
+  --second-color: #0E0E0E;
+  --third-color: #16191C;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--main-color);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 2rem 2rem;
+}
+
+header {
+  position: relative;
+  background: url('../images/hero-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 50vh;
+  overflow: hidden;
+  min-height: 30rem;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(23, 23, 23, .8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.menu-icon {
+  display: flex;
+  justify-content: right;
+}
+
+#menu-mobile {
+  width: 1.9rem;
+  margin: 1rem;
+}
+
+nav,
+.hero,
+img {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-mobile {
+  position: fixed;
+  z-index: 3;
+  width: 15rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  translate: 15rem;
+  background-color: var(--second-color);
+  overflow: hidden;
+  transition: translate 0.3s ease-in;
+}
+
+.menu-mobile.visible {
+  translate: 0rem;
+}
+
+.menu-mobile nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.menu-mobile ul {
+  padding: 2rem 1.5rem;
+}
+
+.menu-mobile nav a {
+  display: block;
+  padding: 1.5rem 2rem;
+}
+
+
+.menu {
+  display: none;
+}
+
+.menu.visible {
+  display: inline;
+}
+
+header nav {
+  justify-content: right;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav li {
+  padding: 1.5rem 2rem;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero figure {
+  margin: 1rem auto;
+  width: 7rem;
+  height: 7rem;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.hero img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.hero figcaption {
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  margin: auto;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 20rem;
+}
+
+.about-me .container {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100%;
+}
+
+.about-me .left {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
+  gap: 2rem;
+}
+
+.about-me .left .social-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-me .right figure {
+  width: 12rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.about-me .right img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.projects {
+
+  background-color: #0E0E0E;
+}
+
+.projects .options ul {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  /*grid-template-rows: repeat(4, 1fr);*/
+  text-align: center;
+}
+
+.projects .options li {
+  margin: 0.5rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.projects .options li.active {
+  background-color: white;
+  border-radius: 0.3rem;
+  color: black;
+  font-weight: 700;
+}
+
+.projects .projects-cards {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.projects .projects-cards article {
+  text-align: center;
+  background-color: var(--third-color);
+}
+
+.projects .projects-cards article figure {
+  width: 100%;
+}
+
+.projects .projects-cards article figure img {
+  width: inherit;
+}
+
+.projects .projects-cards article p:nth-child(2) {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.projects .projects-cards article .details div {
+  margin: 0.5rem auto;
+  width: fit-content;
+}
+
+.projects article {
+  border-radius: 0.3rem;
+}
