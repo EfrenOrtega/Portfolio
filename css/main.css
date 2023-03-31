@@ -249,9 +249,20 @@ header nav a {
 }
 
 .projects .projects-cards article {
+  position: relative;
   text-align: center;
   background-color: var(--third-color);
   cursor: pointer;
+}
+
+.projects .projects-cards article::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .projects .projects-cards article figure {
@@ -275,6 +286,7 @@ header nav a {
 
 .projects .projects-cards article .details div img {
   margin: 0.5rem;
+  height: 1.5rem;
 }
 
 .projects article {
@@ -376,6 +388,45 @@ figcaption {
 
 .project-techs article img {
   margin: auto;
+  height: 1.5rem;
+}
+
+.carrosuel {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+
+.carrosuel img {
+  min-width: 100%;
+  padding: 0 0.2rem;
+  height: 17rem;
+  object-fit: contain;
+}
+
+.btns span.active {
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btns span {
+  text-align: center;
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: #616161;
+  border-radius: 100%;
+  cursor: pointer;
 }
 
 footer {
@@ -415,6 +466,10 @@ footer img {
 }
 
 @media only screen and (min-width: 768px) and (max-width:1034px) {
+
+  .details-project .container {
+    min-width: 100%;
+  }
 
   .menu-icon {
     display: none;
@@ -500,6 +555,7 @@ footer img {
   }
 
   .projects .projects-cards article {
+    overflow: hidden;
     border-radius: 0.5em;
   }
 

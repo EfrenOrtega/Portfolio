@@ -1,44 +1,145 @@
 [
   {
     "title": "Musix",
-    "description": "Aplicación de Música",
+    "whatIs": "Aplicación de Música",
+    "description": "Aplicación de Musica creada principalmente con el framework Tauri para computadoras de Escritorio y como servidor se hizo uso del Framework Flask de Python.",
+    "functions": [
+      "Crear un Cuenta como Usuario",
+      "Autenticarse",
+      "Reproducir Canciones",
+      "Funciones de un reproductor (Play, Pause, Next, Prev, Loop)",
+      "Agregar Canción a Favoritos",
+      "Agregar Canción a una Playlist",
+      "Crear Playlist",
+      "Reproducir Playlist"
+    ],
     "tech": [
       "Tauri",
       "Python",
       "Flask",
       "JS"
     ],
-    "github": "https://www.google.com",
+    "github": "",
     "Team": false,
-    "image": "Musix.svg",
+    "image": "musix.png",
+    "images": [
+      "./images/musix.png"
+    ],
     "tag": "Escritorio"
   },
   {
-    "title": "Musix",
-    "description": "Aplicación de Música",
+    "title": "Movies",
+    "whatIs": "Pagina Informativa de Peliculas",
+    "description": "Página informativa de Peliculas en la cual se consume la API themoviedb.org y se genera un backend con Flask en python",
+    "functions": [
+      "Crear un Cuenta",
+      "Autenticarse",
+      "Ver información de peliculas",
+      "Buscar Peliculas"
+    ],
     "tech": [
-      "Tauri",
+      "HTML",
+      "CSS",
+      "JS",
       "Python",
       "Flask",
-      "JS"
+      "MongoDB"
     ],
-    "github": "https://www.google.com",
+    "github": "",
     "Team": false,
-    "image": "Musix.svg",
-    "tag": "Escritorio"
+    "image": "movies_index.png",
+    "images": [
+      "./images/movies_index.png",
+      "./images/movies_login.png",
+      "./images/movies_mobile.png"
+    ],
+    "tag": "Web"
   },
   {
-    "title": "Musix",
-    "description": "Aplicación de Música",
+    "title": "Veterinaria",
+    "whatIs": "Maquetación",
+    "description": "Maquetación con HTML y CSS de una página web para una veterinaría",
+    "functions": [],
     "tech": [
-      "Tauri",
-      "Python",
-      "Flask",
-      "JS"
+      "HTML",
+      "CSS"
     ],
-    "github": "https://www.google.com",
+    "github": "https://github.com/EfrenOrtega/Proyecto-Certificacion-EscalabAcademy",
     "Team": false,
-    "image": "Musix.svg",
-    "tag": "Movil"
+    "image": "veterinaria.png",
+    "images": [
+      "./images/veterinaria.png",
+      "./images/veterinaria_mobile.png"
+    ],
+    "tag": "Web"
+  },
+  {
+    "title": "Landing Page",
+    "whatIs": "Maquetación",
+    "description": "Maquetación con HTML y CSS de un Landing Page realizada en un Taller de Desarrollo Web",
+    "functions": [],
+    "tech": [
+      "HTML",
+      "CSS"
+    ],
+    "github": "",
+    "Team": false,
+    "image": "Landing_Page.png",
+    "images": [
+      "./images/Landing_Page.png",
+      "./images/Landing_Page_mobile.png"
+    ],
+    "tag": "Web"
+  },
+  {
+    "title": "Dashboard IoT",
+    "whatIs": "Administración de dispositivos IoT.",
+    "description": "Aplicación Web para la administración de dispositivos IoT con Nodejs realizado en Equipo",
+    "functions": [
+      "Visualizar Datos de dispositivos IoT en gráficas",
+      "Generar Reportes .pdf",
+      "Modo Dark/Light",
+      "Autenticación"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS",
+      "Nodejs"
+    ],
+    "github": "https://github.com/JoseckGD/dashboard-iot",
+    "Team": true,
+    "image": "dashboard_iot.png",
+    "images": [
+      "./images/dashboard_iot.png",
+      "./images/dashboard_iot_login.png",
+      "./images/dashboard_iot_light.png"
+    ],
+    "tag": "Web"
+  },
+  {
+    "title": "CRUD con Express.js",
+    "whatIs": "Página Web",
+    "description": "CRUD con Express.js y PostgreSQL",
+    "functions": [
+      "Agregar",
+      "Actualizar",
+      "Eliminar"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS",
+      "Nodejs",
+      "PostgreSQL"
+    ],
+    "github": "https://github.com/EfrenOrtega/cruds-express",
+    "Team": false,
+    "image": "crud_express_index.png",
+    "images": [
+      "./images/crud_express_index.png",
+      "./images/crud_express_crudPeople.png"
+    ],
+    "tag": "Web"
   }
 ]
