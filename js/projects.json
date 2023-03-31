@@ -143,8 +143,8 @@
     "tag": "Web"
   },
   {
-    "title": "Recetas de Comida",
-    "whatIs": "Aplicación Móvil",
+    "title": "Cukit",
+    "whatIs": "Recetas de Comida",
     "description": "Aplicación Móvil con Android Studio y Nodejs; trabajo en equipo",
     "functions": [
       "Registro de Usuario",
