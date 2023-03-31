@@ -19,7 +19,9 @@ const techImg = {
   "HTML": "./images/html.svg",
   "Nodejs": "./images/nodejs.svg",
   "PostgreSQL": "./images/postgresql.svg",
-  "MongoDB": "./images/mongo.svg"
+  "MongoDB": "./images/mongo.svg",
+  "Android Studio": "./images/android-studio.svg",
+  "MySql": "./images/mysql.svg"
 }
 
 let projects = []

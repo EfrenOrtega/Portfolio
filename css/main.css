@@ -267,10 +267,14 @@ header nav a {
 
 .projects .projects-cards article figure {
   width: 100%;
+  height: auto;
+  max-height: 20rem;
+  overflow: hidden;
 }
 
 .projects .projects-cards article figure img {
   width: inherit;
+  height: inherit;
 }
 
 .projects .projects-cards article p:nth-child(2) {

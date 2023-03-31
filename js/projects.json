@@ -141,5 +141,32 @@
       "./images/crud_express_crudPeople.png"
     ],
     "tag": "Web"
+  },
+  {
+    "title": "Recetas de Comida",
+    "whatIs": "Aplicación Móvil",
+    "description": "Aplicación Móvil con Android Studio y Nodejs; trabajo en equipo",
+    "functions": [
+      "Registro de Usuario",
+      "Autenticación",
+      "Agregar Recetas",
+      "Seguridad por Json Web Tokens (JWS)",
+      "Visualizar Recetas",
+      "Puntuar y Comentar Recetas"
+    ],
+    "tech": [
+      "Android Studio",
+      "Nodejs",
+      "MySql"
+    ],
+    "github": "https://github.com/JustinAldair/CuKit",
+    "Team": true,
+    "image": "cukit_home.jpg",
+    "images": [
+      "./images/cukit_home.jpg",
+      "./images/cukit_login.jpg",
+      "./images/cukit_platillo.jpg"
+    ],
+    "tag": "Movil"
   }
 ]
