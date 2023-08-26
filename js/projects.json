@@ -10,8 +10,7 @@
       "Funciones de un reproductor (Play, Pause, Next, Prev, Loop)",
       "Agregar Canción a Favoritos",
       "Agregar Canción a una Playlist",
-      "Crear Playlist",
-      "Reproducir Playlist"
+      "Crear Playlist"
     ],
     "tech": [
       "Tauri",
@@ -23,7 +22,10 @@
     "Team": false,
     "image": "musix.png",
     "images": [
-      "./images/musix.png"
+      "./images/musix.png",
+      "./images/musix-playlist.png",
+      "./images/musix-favorites.png"
+
     ],
     "tag": "Escritorio"
   },
@@ -45,7 +47,7 @@
       "Flask",
       "MongoDB"
     ],
-    "github": "",
+    "github": "https://github.com/EfrenOrtega/Movies-Web",
     "Team": false,
     "image": "movies_index.png",
     "images": [
