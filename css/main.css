@@ -420,10 +420,6 @@ figcaption {
   background-color: white;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 .btns {
   display: flex;
   justify-content: center;
@@ -461,6 +457,10 @@ footer img {
 
 @media only screen and (min-width : 0px) and (max-width: 360px) {
 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   .hero h1 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -480,6 +480,7 @@ footer img {
 }
 
 @media only screen and (min-width : 481px) and (min-height: 321px) and (max-width:767px) {
+
 
   .hero h1 {
     font-size: 2rem;
