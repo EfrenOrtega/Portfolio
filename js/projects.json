@@ -1,43 +1,144 @@
 [
   {
+    "title": "ChatBot para la Atención al Cliente y Solicitud de Cotizaciones",
+    "whatIs": "API + FrontEnd",
+    "description": "Descripción API de un chatbot administrable desarrollado con Node.js, Express.js, NLP, etc. Además, se implementaron algunos módulos del lado del cliente con React.js.    ",
+    "customer" : "Xolotl Creative Labs",
+    "customerSite" : "https://xolotlcl.com/",
+    "functions": [
+      ["Chatbot Administrable.", "Agregar, Eliminar, Modificar y Ver intenciones, frases o respuestas."],
+      ["Administrar Paquete de Servicios.",
+      "Agregar, Eliminar y Editar los paquetes que ofrece la empresa."],
+      ["Interacción entre Usuario y Chatbot.",
+      "Responder a Solicitudes del Usuario.",
+      "A través de interacciones con el chatbot, este ofrece paquetes de servicios.",
+      "Ofrecer formulario para dudas o al interesarse por algún paquete para solicitar una cotización a la empresa."],
+      ["Cotizaciones.",
+      "Visualizar y Editar cotizaciones que los usuarios solicitan a la empresa.",
+      "Generar formato PDF de las Cotizaciones.",
+      "Enviar cotización (PDF) ya editada, al correo del cliente."]
+    ],
+    "tech": [
+      "Nodejs",
+      "nlp",
+      "MongoDB",
+      "ReactJs",
+      "JS"
+    ],
+    "github": "",
+    "Team": false,
+    "image": "xolotlcl.jpg",
+    "images": [
+    ],
+    "tag": "Web"
+  },
+  {
     "title": "Musix",
     "whatIs": "Aplicación de Música",
-    "description": "Aplicación de Musica creada principalmente con el framework Tauri para computadoras de Escritorio y como servidor se hizo uso del Framework Flask de Python.",
+    "description": "Aplicación de Música creada principalmente con React.js y Tauri para aplicaciones de Escritorio y como servidor se hizo uso del Framework Flask de Python.",
     "functions": [
-      "Crear un Cuenta como Usuario",
+      "Crear una Cuenta como Usuario",
       "Autenticarse",
       "Reproducir Canciones",
       "Funciones de un reproductor (Play, Pause, Next, Prev, Loop)",
       "Agregar Canción a Favoritos",
       "Agregar Canción a una Playlist",
-      "Crear Playlist"
+      "Crear Playlist",
+      "Busqueda de Canciones",
+      "Mostrar letra sincronizada de una canción",
+      "Manejo de una Queue usando la estructura: Lista Doblemente Enlazada"
     ],
     "tech": [
+      "ReactJs",
       "Tauri",
       "Python",
       "Flask",
-      "JS"
+      "JS",
+      "MongoDB",
+      "CSS",
+      "Figma"
     ],
-    "github": "",
+    "github": "https://github.com/EfrenOrtega/Musix.git",
     "Team": false,
-    "image": "musix.png",
+    "image": "Musix_home.JPG",
     "images": [
-      "./images/musix.png",
-      "./images/musix-playlist.png",
-      "./images/musix-favorites.png"
+      "./images/musix_favorites.JPG",
+      "./images/musix_search.JPG",
+      "./images/musix_lyrics.JPG",
+      "./images/musix_queue.JPG",
+      "./images/musix-playlist.PNG"
 
     ],
     "tag": "Escritorio"
   },
   {
-    "title": "Movies",
-    "whatIs": "Pagina Informativa de Peliculas",
-    "description": "Página informativa de Peliculas en la cual se consume la API themoviedb.org y se genera un backend con Flask en python",
+    "title": "Dashboard IoT",
+    "whatIs": "Administración de dispositivos IoT.",
+    "description": "Sistema web para la administración de dispositivos IoT por el protocolo MQTT con Node.js realizado en equipo como propuesta a una problemática de Empresa Soluciones JPI.",
+    "customer" : "Soluciones JPI",
+    "customerSite" : "",
     "functions": [
-      "Crear un Cuenta",
+      "Autenticación",
+      "Visualizar Datos de dispositivos IoT en gráficas",
+      "Administración de usuarios",
+      "Generar Reportes en formato PDF",
+      "Modo Dark/Light"
+    ],
+    "tech": [
+      "ReactJs",
+      "CSS",
+      "JS",
+      "Nodejs"
+    ],
+    "github": "https://github.com/JoseckGD/dashboard-iot",
+    "Team": true,
+    "image": "dashboard_iot.png",
+    "images": [
+      "./images/dashboard_iot_login.png",
+      "./images/dashboard_iot.png",
+      "./images/dashboard_iot_light.png"
+    ],
+    "tag": "Web"
+  },
+  {
+    "title": "Dictamenes de Autos Antiguos",
+    "whatIs": "Aplicación Móvil",
+    "description": "Aplicación móvil para digitalizar el proceso de dictámenes para autos antiguos para el área de Automotriz en la universidad.",
+    "customer" : "M. En C. Jazmin Rodriguez Flores  ||  Universidad Politécnica de Pachuca",
+    "customerSite" : "",
+    "functions": [
+      "Busqueda por ID del dictamen",
+      "Formularios dividos en Secciones a evaluar",
+      "Calcular y mostrar los resultados de los valores rellenados",
+      "Generar los ditamenes en formato PDF si cuenta con la puntuación requerida"
+    ],
+    "tech": [
+      "IONIC",
+      "ReactJs",
+      "CSS",
+      "JS",
+      "Firebase"
+    ],
+    "github": "https://github.com/EfrenOrtega/dictamen-automotriz.git",
+    "Team": true,
+    "image": "ditactamen_movil_home.png",
+    "images": [
+      "./images/ditactamen_movil_home.png",
+      "./images/ditactamen_movil_secciones.png",
+      "./images/ditactamen_movil_fomulario.png",
+      "./images/ditactamen_movil_evaluaciones.png"
+    ],
+    "tag": "Movil"
+  },
+  {
+    "title": "Movies (Consumo de API)",
+    "whatIs": "Pagina Informativa de Peliculas - Responsivo",
+    "description": "Página informativa de Películas en la cual se consume la API themoviedb.org y se genera un backend con Flask en Python.",
+    "functions": [
+      "Crear una Cuenta",
       "Autenticarse",
-      "Ver información de peliculas",
-      "Buscar Peliculas"
+      "Ver información de películas",
+      "Buscar Películas"
     ],
     "tech": [
       "HTML",
@@ -51,16 +152,16 @@
     "Team": false,
     "image": "movies_index.png",
     "images": [
-      "./images/movies_index.png",
       "./images/movies_login.png",
+      "./images/movies_index.png",
       "./images/movies_mobile.png"
     ],
     "tag": "Web"
   },
   {
     "title": "Veterinaria",
-    "whatIs": "Maquetación",
-    "description": "Maquetación con HTML y CSS de una página web para una veterinaría",
+    "whatIs": "Maquetación Responsiva",
+    "description": "Maquetación con HTML y CSS de una página web para una veterinaria.",
     "functions": [],
     "tech": [
       "HTML",
@@ -77,8 +178,8 @@
   },
   {
     "title": "Landing Page",
-    "whatIs": "Maquetación",
-    "description": "Maquetación con HTML y CSS de un Landing Page realizada en un Taller de Desarrollo Web",
+    "whatIs": "Maquetación - Responsivo",
+    "description": "Maquetación con HTML y CSS de un Landing Page realizada en un taller de Desarrollo Web.",
     "functions": [],
     "tech": [
       "HTML",
@@ -90,32 +191,6 @@
     "images": [
       "./images/Landing_Page.png",
       "./images/Landing_Page_mobile.png"
-    ],
-    "tag": "Web"
-  },
-  {
-    "title": "Dashboard IoT",
-    "whatIs": "Administración de dispositivos IoT.",
-    "description": "Aplicación Web para la administración de dispositivos IoT con Nodejs realizado en Equipo",
-    "functions": [
-      "Visualizar Datos de dispositivos IoT en gráficas",
-      "Generar Reportes .pdf",
-      "Modo Dark/Light",
-      "Autenticación"
-    ],
-    "tech": [
-      "HTML",
-      "CSS",
-      "JS",
-      "Nodejs"
-    ],
-    "github": "https://github.com/JoseckGD/dashboard-iot",
-    "Team": true,
-    "image": "dashboard_iot.png",
-    "images": [
-      "./images/dashboard_iot.png",
-      "./images/dashboard_iot_login.png",
-      "./images/dashboard_iot_light.png"
     ],
     "tag": "Web"
   },
@@ -147,12 +222,12 @@
   {
     "title": "Cukit",
     "whatIs": "Recetas de Comida",
-    "description": "Aplicación Móvil con Android Studio y Nodejs; trabajo en equipo",
+    "description": "Aplicación Móvil con Android Studio y Node.js; trabajo en equipo.",
     "functions": [
       "Registro de Usuario",
       "Autenticación",
       "Agregar Recetas",
-      "Seguridad por Json Web Tokens (JWS)",
+      "Seguridad por JSON Web Tokens (JWT)",
       "Visualizar Recetas",
       "Puntuar y Comentar Recetas"
     ],

@@ -21,7 +21,12 @@ const techImg = {
   "PostgreSQL": "./images/postgresql.svg",
   "MongoDB": "./images/mongo.svg",
   "Android Studio": "./images/android-studio.svg",
-  "MySql": "./images/mysql.svg"
+  "MySql": "./images/mysql.svg",
+  "ReactJs": "./images/reactjs.svg",
+  "Figma": "./images/figma.svg",
+  "nlp": "./images/nlpjs.svg",
+  "IONIC" : "./images/ionic.svg",
+  "Firebase" : "./images/firebase.svg"
 }
 
 let projects = []
@@ -31,7 +36,7 @@ const webProjects = document.getElementsByClassName('web')
 
 let flag = false;
 let flag2 = false;
-let previousBtn = document.getElementById('0')
+let previousBtn = null
 document.addEventListener('click', e => {
 
   //Display the Menu to Mobile
@@ -127,31 +132,90 @@ document.addEventListener('click', e => {
   //Load all projects info to display it
   if (e.target.matches(".card")) {
 
-    previousBtn.classList.remove('active')
-    previousBtn = document.getElementById('0')
-    previousBtn.classList.add('active')
-    $carrousel.scrollLeft = 0
-
     let project = projects[e.target.dataset.index]
     $detailsProject.querySelector('#title').textContent = project.title
     $detailsProject.querySelector('#description').textContent = project.whatIs
     $detailsProject.querySelector('#descriptionDetail').textContent = project.description
     $detailsProject.querySelector('#github').href = project.github
 
-    $detailsProject.querySelector('.carrosuel').innerHTML = ''
+    if (project.customer) {
+      $detailsProject.querySelector('#project-customer').classList.add('active')
+      $detailsProject.querySelector('#webSite').href = project.customer
+      $detailsProject.querySelector('#webSite').textContent = project.customerSite
+      $detailsProject.querySelector('#company').textContent = project.customer
+    } else {
+      $detailsProject.querySelector('#project-customer').classList.remove('active')
+    }
 
-    project.images.map(img => {
-      $detailsProject.querySelector('.carrosuel').innerHTML += `
-        <img class="project-carrosuel" src=${img} alt="Musix">
+
+
+    //==========
+    //CARROSUEL
+    //==========
+    $detailsProject.querySelector('.carrosuel').innerHTML = ''
+    let btns = document.getElementById('carrosuel-btns')
+
+    let imagesLength = project.images.length
+
+    if (project.images && imagesLength > 0) {
+      btns.innerHTML = ''
+      project.images.map((img, index) => {
+        btns.innerHTML += `
+        <span id="${index}" class="btn-carrosuel"></span>
       `
-    })
+
+        $detailsProject.querySelector('.carrosuel').innerHTML += `
+          <img class="project-carrosuel" src=${img} alt="Musix">
+        `
+      })
+      $detailsProject.querySelector('.carrosuel-container').classList.add("active")
+      $detailsProject.querySelector('.no-carrosuel').classList.remove("active")
+
+      previousBtn = document.getElementById('0')
+
+    } else {
+      $detailsProject.querySelector('.carrosuel-container').classList.remove("active")
+      $detailsProject.querySelector('.no-carrosuel').classList.add("active")
+    }
+
+    if (project.images && imagesLength > 0) {
+      previousBtn.classList.remove('active')
+      previousBtn = document.getElementById('0')
+      previousBtn.classList.add('active')
+      $carrousel.scrollLeft = 0
+    }
+      
 
 
     $detailsProject.querySelector('#functions').innerHTML = ''
     project.functions.map(funcion => {
-      $detailsProject.querySelector('#functions').innerHTML += `
-      <li>${funcion}.</li>
-      `
+
+
+      if (typeof funcion == "object") {
+
+        let htmlFeatures = ""
+        funcion.map((feature, index) => {
+
+          if (index == 0) {
+            htmlFeatures += `
+            <li class = "sub-menu-name">${feature}.</li>
+            <ul class="sub-menu">
+          `
+            return
+          }
+
+          htmlFeatures += `<li>${feature}.</li>`
+        })
+
+        htmlFeatures += `</ul>`
+
+        $detailsProject.querySelector('#functions').innerHTML += htmlFeatures
+
+      } else {
+        $detailsProject.querySelector('#functions').innerHTML += `
+        <li>${funcion}.</li>
+        `
+      }
     })
 
     $detailsProject.querySelector('#techs').innerHTML = ''
@@ -159,7 +223,7 @@ document.addEventListener('click', e => {
       $detailsProject.querySelector('#techs').innerHTML += `
         <article>
           <figure>
-            <img src="${techImg[tech]}" alt=${tech}>
+            <img src="${techImg[tech]}" alt=${tech} title=${tech}>
           </figure>
           <figcaption>${tech}</figcaption>
         </article>
